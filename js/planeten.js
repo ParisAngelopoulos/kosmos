@@ -38,4 +38,28 @@
     kies(tr.dataset.id);
     document.querySelector('.planeet-held').scrollIntoView({ behavior: 'smooth' });
   });
+  // Links like "bekijk in 3D" further down the page: show that planet at the top
+  window.addEventListener('hashchange', () => {
+    const w = WERELDEN.find(x => '#' + x.id === location.hash);
+    if (!w) return;
+    kies(w.id, true);
+    document.querySelector('.planeet-held').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  // The top 10 of planets most like the Earth, sortable by score or by distance
+  const top = document.getElementById('top');
+  const getal = (x, d = 1) => x.toLocaleString('nl-NL', { minimumFractionDigits: d, maximumFractionDigits: d });
+  function toonTop(op) {
+    const lijst = [...VERVANGERS].sort((a, b) => op === 'afstand' ? a.afstand - b.afstand : b.esi - a.esi);
+    top.innerHTML = lijst.map(v => `
+      <li>
+        <div class="top-kop"><h3>${v.naam}</h3><span class="score">${getal(v.esi, 2)}</span></div>
+        <div class="balk" aria-hidden="true"><span style="width:${v.esi * 100}%"></span></div>
+        <p>${v.tekst}</p>
+        <p class="cijfers">${getal(v.afstand, v.afstand < 100 ? 1 : 0)} lichtjaar · een jaar duurt ${getal(v.jaar)} dagen · ${getal(v.grootte, 2)} × de Aarde${v.gemeten ? '' : ' (geschat)'} · ontdekt ${v.ontdekt}</p>
+      </li>`).join('');
+    document.querySelectorAll('.sorteer button').forEach(b => b.setAttribute('aria-pressed', b.dataset.sort === op));
+  }
+  document.querySelector('.sorteer').addEventListener('click', e => { const b = e.target.closest('button'); if (b) toonTop(b.dataset.sort); });
+  toonTop('esi');
 })();

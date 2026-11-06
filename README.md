@@ -33,7 +33,8 @@ Uitleg over het heelal, in gewone taal en in het Nederlands. Onderwerpen: **zwar
 - **Een artikel in hoofdstukken**:
   - wat een planeet is
   - hoe planeten ontstaan
-  - soorten planeten, ook die wij niet hebben, zoals superaardes en zwervende planeten
+  - soorten planeten in drie groepen: waar ze van gemaakt zijn (superaardes, oceaan- en lavawerelden), extreem weer (stormplaneten met winden tot 33.000 km/u, ijzerregen) en leefbaar of niet (leefbare zone, twee zonnen, zwervers)
+  - een top 10 van planeten die het meest op de Aarde lijken, te sorteren op score of afstand. De score (Earth Similarity Index) is berekend uit grootte en sterlicht, met gegevens van het NASA Exoplanet Archive
   - de geschiedenis van exoplaneten
   - hoe je ze vindt
   - of er leven kan zijn
