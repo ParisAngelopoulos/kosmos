@@ -1,0 +1,164 @@
+@font-face { font-family: "Newsreader"; src: url("../fonts/newsreader-latin-400-normal.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Newsreader"; font-style: italic; src: url("../fonts/newsreader-latin-400-italic.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Newsreader"; font-weight: 600; src: url("../fonts/newsreader-latin-600-normal.woff2") format("woff2"); font-display: swap; }
+
+:root {
+  --bg: #0c0b0d;
+  --vlak: #141317;
+  --tekst: #ece6dc;
+  --zacht: #a59d92;
+  --lijn: #2a272d;
+  --gloed: #f0a35c;
+  --serif: "Newsreader", Georgia, serif;
+  --sans: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--tekst); font: 19px/1.65 var(--serif); -webkit-font-smoothing: antialiased; }
+a { color: var(--gloed); }
+img, svg { max-width: 100%; display: block; }
+h1, h2, h3 { font-weight: 400; line-height: 1.12; letter-spacing: -0.01em; }
+.muted { color: var(--zacht); }
+.wrap { width: min(1120px, 100% - 40px); margin: 0 auto; }
+
+/* ---------- Top bar ---------- */
+
+.kop { position: absolute; top: 0; left: 0; right: 0; z-index: 5; }
+.kop .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; flex-wrap: wrap; }
+.merk { font: 600 22px var(--serif); color: var(--tekst); text-decoration: none; letter-spacing: 0.01em; }
+.merk span { color: var(--gloed); }
+#onderwerpen { display: flex; gap: 22px; font: 15px var(--sans); }
+#onderwerpen a { color: var(--tekst); text-decoration: none; padding-bottom: 3px; border-bottom: 1px solid transparent; }
+#onderwerpen a:hover { border-bottom-color: var(--zacht); }
+#onderwerpen a[aria-current="page"] { border-bottom-color: var(--gloed); }
+#onderwerpen .binnenkort { color: var(--zacht); cursor: default; }
+#onderwerpen .binnenkort::after { content: " · binnenkort"; font-size: 12px; }
+
+/* ---------- The black hole at the top ---------- */
+
+.held { position: relative; height: 100vh; min-height: 560px; overflow: hidden; background: #000; }
+#zwart-gat { position: absolute; inset: 0; width: 100%; height: 100%; cursor: grab; touch-action: pan-y; }
+#zwart-gat:active { cursor: grabbing; }
+.held::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 40%; background: linear-gradient(transparent, var(--bg)); pointer-events: none; }
+.held-tekst { position: absolute; left: 0; right: 0; bottom: 64px; z-index: 2; pointer-events: none; text-shadow: 0 2px 24px rgba(0, 0, 0, 0.85); }
+.held-tekst .wrap > * { pointer-events: auto; }
+.kicker { font: 600 13px var(--sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--gloed); margin: 0 0 10px; }
+.held h1 { font-size: clamp(56px, 9vw, 120px); margin: 0 0 14px; }
+.held .lead { font-size: clamp(19px, 2vw, 23px); max-width: 32em; margin: 0 0 22px; }
+.verder { font: 600 15px var(--sans); color: var(--tekst); text-decoration: none; border-bottom: 1px solid var(--gloed); padding-bottom: 2px; }
+.bijschrift { position: absolute; right: 20px; bottom: 20px; z-index: 2; font: 12.5px var(--sans); color: var(--zacht); text-align: right; max-width: 24em; }
+.geen-webgl .held { background: radial-gradient(circle at 60% 45%, #000 0 9%, #f0a35c 10%, #6b2a0c 18%, #000 32%); }
+.geen-webgl .bijschrift::before { content: "Je browser kan de simulatie niet tonen. "; }
+
+/* ---------- Article with a table of contents ---------- */
+
+.pagina { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 56px; padding: 40px 0 80px; }
+.inhoud { position: sticky; top: 24px; align-self: start; font: 14.5px/1.5 var(--sans); }
+.inhoud p { font-weight: 600; color: var(--zacht); text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px; margin: 0 0 10px; }
+.inhoud ol { list-style: none; margin: 0; padding: 0; border-left: 1px solid var(--lijn); }
+.inhoud a { display: block; padding: 5px 0 5px 14px; margin-left: -1px; color: var(--zacht); text-decoration: none; border-left: 2px solid transparent; }
+.inhoud a:hover { color: var(--tekst); }
+.inhoud a.nu { color: var(--tekst); border-left-color: var(--gloed); }
+
+article { max-width: 720px; }
+article section { padding: 28px 0 36px; border-top: 1px solid var(--lijn); scroll-margin-top: 16px; }
+article section:first-child { border-top: 0; padding-top: 0; }
+article h2 { font-size: clamp(34px, 4vw, 46px); margin: 0 0 18px; }
+article h3 { font-size: 24px; margin: 26px 0 6px; }
+article p { margin: 0 0 16px; }
+.inleiding { font-size: 23px; line-height: 1.5; }
+.kader { margin: 22px 0; padding: 18px 22px; background: var(--vlak); border-left: 3px solid var(--gloed); font-size: 17.5px; }
+.kader strong { font-family: var(--sans); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gloed); display: block; margin-bottom: 4px; }
+
+/* Types of black holes */
+.soorten { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+.soort { background: var(--vlak); border: 1px solid var(--lijn); padding: 18px 20px; }
+.soort h3 { margin: 0 0 4px; font-size: 22px; }
+.soort .massa { font: 600 13.5px var(--sans); color: var(--gloed); margin: 0 0 8px; }
+.soort p:last-child { margin: 0; font-size: 16.5px; }
+
+/* The diagram */
+figure { margin: 24px 0; }
+figcaption { font: 14px/1.5 var(--sans); color: var(--zacht); margin-top: 8px; }
+.bouw text { font: 13px var(--sans); fill: var(--tekst); }
+.bouw .lijn { stroke: var(--zacht); stroke-width: 1; }
+.uitleg-lijst { margin: 16px 0; padding: 0; list-style: none; }
+.uitleg-lijst li { padding: 10px 0; border-top: 1px solid var(--lijn); }
+.uitleg-lijst b { font-weight: 600; }
+
+/* Calculator */
+.reken { background: var(--vlak); border: 1px solid var(--lijn); padding: 20px 22px; margin: 20px 0; }
+.reken .knoppen { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.reken button { font: 15px var(--sans); padding: 8px 14px; border: 1px solid var(--lijn); background: transparent; color: var(--tekst); cursor: pointer; }
+.reken button:hover { border-color: var(--zacht); }
+.reken button[aria-pressed="true"] { background: var(--gloed); border-color: var(--gloed); color: #1a0f05; }
+#reken-uitkomst p { margin: 0 0 6px; }
+#reken-uitkomst strong { color: var(--gloed); font-weight: 600; }
+
+/* Timeline */
+.tijdlijn { list-style: none; margin: 20px 0; padding: 0; }
+.tijdlijn li { display: grid; grid-template-columns: 76px 1fr; gap: 16px; padding: 12px 0; border-top: 1px solid var(--lijn); }
+.tijdlijn .jaar { font: 600 16px var(--sans); color: var(--gloed); font-variant-numeric: tabular-nums; }
+.tijdlijn p { margin: 0; font-size: 17.5px; }
+
+/* Table of known black holes */
+.tabel { width: 100%; border-collapse: collapse; font: 15.5px/1.45 var(--sans); margin: 18px 0; }
+.tabel th { text-align: left; font-weight: 600; color: var(--zacht); font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.08em; padding: 8px 10px 8px 0; border-bottom: 1px solid var(--lijn); }
+.tabel td { padding: 12px 10px 12px 0; border-bottom: 1px solid var(--lijn); vertical-align: top; }
+.tabel td:first-child { font-weight: 600; color: var(--tekst); }
+.tabel .getal { white-space: nowrap; }
+
+/* Myths */
+.mythe { margin: 18px 0; }
+.mythe h3 { margin: 0 0 4px; }
+.mythe .antwoord { font: 700 13px var(--sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--gloed); margin-right: 6px; }
+
+.bronnen { font: 15px/1.6 var(--sans); padding-left: 20px; }
+.bronnen li { margin-bottom: 6px; }
+
+footer { border-top: 1px solid var(--lijn); padding: 26px 0 40px; font: 14px var(--sans); color: var(--zacht); }
+footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer a { color: var(--zacht); }
+
+/* ---------- Home page ---------- */
+
+.thuis { padding: 140px 0 60px; }
+.thuis h1 { font-size: clamp(52px, 8vw, 100px); margin: 0 0 16px; }
+.thuis .lead { font-size: clamp(20px, 2.2vw, 25px); max-width: 30em; color: var(--zacht); margin: 0 0 48px; }
+.kaarten { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 16px; }
+.kaart { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 320px; padding: 24px; background: var(--vlak); border: 1px solid var(--lijn); color: var(--tekst); text-decoration: none; overflow: hidden; }
+.kaart h2 { font-size: 34px; margin: 0 0 6px; position: relative; }
+.kaart p { margin: 0; font-size: 17px; color: var(--zacht); position: relative; }
+.kaart .status { position: absolute; top: 20px; left: 24px; font: 600 12px var(--sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--zacht); }
+a.kaart .status { color: var(--gloed); }
+a.kaart:hover { border-color: var(--zacht); }
+.kaart.zwart::before { content: ""; position: absolute; width: 260px; height: 260px; right: -50px; top: -40px; border-radius: 50%; background: radial-gradient(circle, #000 0 30%, #f0a35c 33%, rgba(107, 42, 12, 0.8) 45%, transparent 68%); transition: transform 0.6s; }
+a.kaart.zwart:hover::before { transform: scale(1.06) rotate(8deg); }
+.kaart.binnenkort { opacity: 0.6; }
+
+/* ---------- Small screens ---------- */
+
+@media (max-width: 900px) {
+  .pagina { grid-template-columns: 1fr; gap: 0; }
+  .inhoud { display: none; }
+  .kaarten { grid-template-columns: 1fr; }
+  .kaart { min-height: 200px; }
+}
+@media (max-width: 640px) {
+  body { font-size: 18px; }
+  .wrap { width: calc(100% - 32px); }
+  #onderwerpen { gap: 14px; font-size: 14px; }
+  #onderwerpen .binnenkort { display: none; }
+  .held { height: 88vh; }
+  .held-tekst { bottom: 70px; }
+  .bijschrift { left: 16px; right: 16px; text-align: left; bottom: 14px; }
+  .inleiding { font-size: 20px; }
+  .soorten { grid-template-columns: 1fr; }
+  .tabel thead { display: none; }
+  .tabel tr { display: block; padding: 10px 0; border-bottom: 1px solid var(--lijn); }
+  .tabel td { display: block; border: 0; padding: 2px 0; }
+  .tabel td[data-kop]::before { content: attr(data-kop) ": "; color: var(--zacht); }
+  .tijdlijn li { grid-template-columns: 60px 1fr; gap: 10px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

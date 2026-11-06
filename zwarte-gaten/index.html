@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zwarte gaten · Kosmos</title>
+    <meta name="description" content="Wat is een zwart gat, hoe ontstaat het, en wat gebeurt er als je erin valt? Uitleg in gewone taal, met een live simulatie.">
+    <meta name="theme-color" content="#0c0b0d">
+    <link rel="preload" href="../fonts/newsreader-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-root="../" data-onderwerp="zwarte-gaten">
+    <header class="kop">
+        <div class="wrap">
+            <a class="merk" href="../">Kosmos<span>.</span></a>
+            <nav id="onderwerpen" aria-label="Onderwerpen"><a href="./" aria-current="page">Zwarte gaten</a></nav>
+        </div>
+    </header>
+
+    <section class="held" aria-label="Simulatie van een zwart gat">
+        <canvas id="zwart-gat" aria-label="Een zwart gat met een gloeiende schijf van gas eromheen. Sleep om te draaien."></canvas>
+        <div class="held-tekst">
+            <div class="wrap">
+                <p class="kicker">Onderwerp 1</p>
+                <h1>Zwarte gaten</h1>
+                <p class="lead">Een plek waar de zwaartekracht zo sterk is dat zelfs licht niet meer kan ontsnappen. Wat is het, hoe ontstaat het, en wat gebeurt er als je te dichtbij komt?</p>
+                <a class="verder" href="#wat">Lees verder ↓</a>
+            </div>
+        </div>
+        <p class="bijschrift">Live simulatie: het licht van de schijf en de sterren buigt om het zwarte gat heen. Sterren erachter worden uitgerekt tot boogjes. Sleep om te draaien.</p>
+    </section>
+
+    <div class="wrap pagina">
+        <aside class="inhoud" aria-label="Inhoud">
+            <p>Inhoud</p>
+            <ol>
+                <li><a href="#wat">Wat is het?</a></li>
+                <li><a href="#ontstaan">Hoe ontstaat het?</a></li>
+                <li><a href="#soorten">Vier soorten</a></li>
+                <li><a href="#bouw">Hoe ziet het eruit?</a></li>
+                <li><a href="#grootte">Hoe groot is het?</a></li>
+                <li><a href="#vallen">Erin vallen</a></li>
+                <li><a href="#zien">Hoe weten we het?</a></li>
+                <li><a href="#bekend">Bekende zwarte gaten</a></li>
+                <li><a href="#mythes">Klopt het dat…</a></li>
+                <li><a href="#bronnen">Bronnen</a></li>
+            </ol>
+        </aside>
+
+        <article>
+            <section id="wat">
+                <h2>Wat is een zwart gat?</h2>
+                <p class="inleiding">Een zwart gat is een plek in de ruimte waar heel veel massa op een heel klein punt zit. De zwaartekracht is daar zo sterk dat niets meer weg kan komen, ook licht niet. Daarom is het zwart.</p>
+                <p>Om van een plek weg te komen, moet je snel genoeg gaan. Van de Aarde is dat ongeveer 11 kilometer per seconde: langzamer, en je valt terug. Hoe zwaarder en kleiner iets is, hoe sneller je moet. Bij een zwart gat is er een grens waarbinnen je sneller dan het licht zou moeten gaan. En niets gaat sneller dan het licht.</p>
+                <p>Die grens heet de <b>waarnemingshorizon</b>. Alles wat erover gaat, komt nooit meer terug. Het zwart gat is dus eigenlijk geen gat, maar een bol waar je in kunt vallen en nooit meer uit komt.</p>
+                <div class="kader"><strong>Goed om te weten</strong>Een zwart gat zuigt niet. Van een afstand trekt het net zo hard als elk ander ding met dezelfde massa. Als de Zon in een zwart gat van dezelfde massa zou veranderen, bleef de Aarde gewoon in haar baan draaien. Het zou alleen donker en koud worden.</div>
+            </section>
+
+            <section id="ontstaan">
+                <h2>Hoe ontstaat een zwart gat?</h2>
+                <p>De meeste zwarte gaten zijn het einde van een heel zware ster. Een ster is een gevecht tussen twee krachten: de zwaartekracht trekt alles naar binnen, en de hitte van de kernfusie in het hart duwt naar buiten. Zolang er brandstof is, houden die twee elkaar in evenwicht.</p>
+                <p>Als de brandstof op is, wint de zwaartekracht. Bij een ster als de Zon blijft er dan een kleine, hete <b>witte dwerg</b> over. Bij een ster van meer dan ongeveer twintig keer de massa van de Zon stort het hart in één keer in, terwijl de buitenkant wegslaat in een enorme explosie: een <b>supernova</b>. Is het hart dat overblijft zwaarder dan ongeveer drie keer de Zon, dan kan niets de instorting meer stoppen. Er ontstaat een zwart gat.</p>
+                <p>Zwarte gaten kunnen daarna groeien door gas en sterren op te slokken, of door met elkaar samen te smelten. Zo zijn waarschijnlijk de reuzen in het midden van sterrenstelsels ontstaan, al weten sterrenkundigen nog niet precies hoe die zo snel zo groot konden worden.</p>
+                <div class="kader"><strong>En de Zon?</strong>De Zon wordt nooit een zwart gat: daarvoor is ze veel te licht. Over ongeveer vijf miljard jaar zwelt ze op tot een rode reus en eindigt ze als een witte dwerg.</div>
+            </section>
+
+            <section id="soorten">
+                <h2>Vier soorten zwarte gaten</h2>
+                <p>Zwarte gaten worden ingedeeld naar hun massa, gemeten in <i>zonsmassa's</i>: één zonsmassa is zo zwaar als onze Zon.</p>
+                <div class="soorten">
+                    <div class="soort">
+                        <h3>Stellair</h3>
+                        <p class="massa">ongeveer 3 tot 100 zonsmassa's</p>
+                        <p>Ontstaan uit een ingestorte zware ster. In onze Melkweg zijn er naar schatting zo'n honderd miljoen, maar de meeste zijn onzichtbaar.</p>
+                    </div>
+                    <div class="soort">
+                        <h3>Middelzwaar</h3>
+                        <p class="massa">honderd tot honderdduizend zonsmassa's</p>
+                        <p>Zeldzaam en moeilijk te vinden. In 2024 vonden sterrenkundigen sterke aanwijzingen voor een zwart gat van minstens 8.200 zonsmassa's in de sterrenhoop Omega Centauri.</p>
+                    </div>
+                    <div class="soort">
+                        <h3>Superzwaar</h3>
+                        <p class="massa">miljoenen tot miljarden zonsmassa's</p>
+                        <p>Zit in het midden van bijna elk groot sterrenstelsel, ook in dat van ons: Sagittarius A*.</p>
+                    </div>
+                    <div class="soort">
+                        <h3>Oer-zwart gat</h3>
+                        <p class="massa">van heel klein tot heel zwaar</p>
+                        <p>Zouden vlak na de oerknal kunnen zijn ontstaan. Ze zijn bedacht, maar nog nooit gevonden.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="bouw">
+                <h2>Hoe ziet een zwart gat eruit?</h2>
+                <p>Het zwarte gat zelf zie je niet. Wat je wel ziet, is wat eromheen gebeurt: gas dat eromheen draait en zo heet wordt dat het fel gaat stralen. In de simulatie bovenaan deze pagina zie je ook iets vreemds: de schijf lijkt óver het zwarte gat heen te buigen. Dat is licht van de achterkant van de schijf, dat door de zwaartekracht om het zwarte gat heen naar ons toe wordt gebogen.</p>
+                <figure>
+                    <svg class="bouw" viewBox="0 0 640 330" role="img" aria-label="Doorsnede van een zwart gat met de singulariteit, de waarnemingshorizon, de fotonsfeer, de schijf en de straalstromen">
+                        <defs>
+                            <linearGradient id="schijf" x1="0" x2="1">
+                                <stop offset="0" stop-color="#6b2a0c" stop-opacity="0"/>
+                                <stop offset="0.25" stop-color="#f0a35c"/>
+                                <stop offset="0.45" stop-color="#fff1d8"/>
+                                <stop offset="0.55" stop-color="#fff1d8"/>
+                                <stop offset="0.75" stop-color="#f0a35c"/>
+                                <stop offset="1" stop-color="#6b2a0c" stop-opacity="0"/>
+                            </linearGradient>
+                            <linearGradient id="straal" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0" stop-color="#9fc4ff" stop-opacity="0"/>
+                                <stop offset="1" stop-color="#9fc4ff" stop-opacity="0.8"/>
+                            </linearGradient>
+                        </defs>
+                        <rect x="314" y="10" width="12" height="112" fill="url(#straal)"/>
+                        <rect x="314" y="208" width="12" height="112" fill="url(#straal)" transform="rotate(180 320 264)"/>
+                        <ellipse cx="320" cy="165" rx="250" ry="22" fill="url(#schijf)" opacity="0.9"/>
+                        <circle cx="320" cy="165" r="62" fill="none" stroke="#a59d92" stroke-dasharray="4 4"/>
+                        <circle cx="320" cy="165" r="42" fill="#000" stroke="#2a272d"/>
+                        <circle cx="320" cy="165" r="2.5" fill="#f0a35c"/>
+                        <line class="lijn" x1="322" y1="163" x2="430" y2="75"/><text x="436" y="72">singulariteit</text>
+                        <line class="lijn" x1="290" y1="136" x2="190" y2="70"/><text x="80" y="66">waarnemingshorizon</text>
+                        <line class="lijn" x1="371" y1="130" x2="470" y2="110"/><text x="476" y="114">fotonsfeer</text>
+                        <line class="lijn" x1="140" y1="170" x2="110" y2="235"/><text x="40" y="252">schijf van heet gas</text>
+                        <line class="lijn" x1="326" y1="40" x2="400" y2="30"/><text x="406" y="34">straalstroom</text>
+                    </svg>
+                    <figcaption>Een zwart gat van opzij gezien (niet op schaal). De schijf is in werkelijkheid veel groter dan de horizon.</figcaption>
+                </figure>
+                <ul class="uitleg-lijst">
+                    <li><b>Singulariteit.</b> Het midden, waar volgens de theorie alle massa op één punt zit. Wat daar echt gebeurt, weet niemand: de natuurwetten die we kennen werken daar niet meer.</li>
+                    <li><b>Waarnemingshorizon.</b> De grens waar niets meer van terugkomt, ook licht niet. Dit is de 'buitenkant' van het zwarte gat.</li>
+                    <li><b>Fotonsfeer.</b> Op anderhalf keer de afstand van de horizon kan licht in een cirkel om het zwarte gat heen draaien. Daardoor zie je rond de zwarte schaduw een dunne ring van licht.</li>
+                    <li><b>Schijf van heet gas.</b> Gas dat naar binnen spiraalt, wrijft langs zichzelf en wordt miljoenen graden heet. De kant die naar ons toe draait, lijkt feller dan de andere kant. Dat zie je ook in de simulatie.</li>
+                    <li><b>Straalstromen.</b> Bij sommige zwarte gaten schiet een deel van het gas met bijna de lichtsnelheid weg langs de polen, soms duizenden lichtjaren ver.</li>
+                </ul>
+            </section>
+
+            <section id="grootte">
+                <h2>Hoe groot is een zwart gat?</h2>
+                <p>Elk ding kan in theorie een zwart gat worden, als je het maar klein genoeg samenperst. Hoe klein, hangt alleen af van de massa. Die grens heet de <i>Schwarzschildstraal</i>, naar de Duitse sterrenkundige Karl Schwarzschild, die hem in 1916 uitrekende. Kies hieronder iets uit:</p>
+                <div class="reken" id="reken">
+                    <div class="knoppen" role="group" aria-label="Kies een voorbeeld">
+                        <button type="button" data-voorbeeld="mens">Een mens</button>
+                        <button type="button" data-voorbeeld="aarde">De Aarde</button>
+                        <button type="button" data-voorbeeld="zon">De Zon</button>
+                        <button type="button" data-voorbeeld="sgra">Sagittarius A*</button>
+                        <button type="button" data-voorbeeld="m87">M87*</button>
+                    </div>
+                    <div id="reken-uitkomst" aria-live="polite"><p>De Aarde zou als zwart gat ongeveer zo groot zijn als een knikker (1,8 centimeter).</p></div>
+                </div>
+                <p>Een zwart gat dat tien keer zo zwaar is, is dus ook tien keer zo groot. Daardoor zijn de grootste zwarte gaten eigenlijk niet eens zo dicht: gemiddeld zou een superzwaar zwart gat van een paar miljard zonsmassa's minder dicht zijn dan water.</p>
+            </section>
+
+            <section id="vallen">
+                <h2>Wat gebeurt er als je erin valt?</h2>
+                <p>Stel: je zweeft met je voeten naar een zwart gat toe. Je voeten zijn dichter bij het zwarte gat dan je hoofd, dus ze worden harder aangetrokken. Bij een klein zwart gat is dat verschil al ver voor de horizon zo groot dat je in de lengte wordt uitgerekt en in de breedte samengeperst, als spaghetti. Sterrenkundigen noemen dat echt <b>spaghettificatie</b>.</p>
+                <p>Bij een superzwaar zwart gat is het verschil bij de horizon veel kleiner. Daar zou je over de horizon kunnen zweven zonder er iets van te merken. Pas veel verder naar binnen word je uit elkaar getrokken.</p>
+                <h3>De tijd gaat langzamer</h3>
+                <p>Dicht bij een zwart gat loopt de tijd langzamer dan ver ervandaan. Dat voorspelde Einstein, en het is gemeten: zelfs de klokken in GPS-satellieten moeten ervoor gecorrigeerd worden, omdat de zwaartekracht van de Aarde ook een klein beetje meetelt. Kijkt iemand van een veilige afstand toe terwijl jij naar de horizon valt, dan zie je er voor die toeschouwer steeds langzamer uit, steeds roder en vager, tot je uit het zicht verdwijnt. Dat je over de horizon gaat, ziet die toeschouwer nooit.</p>
+            </section>
+
+            <section id="zien">
+                <h2>Hoe weten we dat ze bestaan?</h2>
+                <p>Een zwart gat geeft zelf geen licht. Toch weten we zeker dat ze bestaan: we zien wat ze met hun omgeving doen. Sterren die razendsnel om iets onzichtbaars draaien, gas dat fel straalt in röntgenlicht, en trillingen in de ruimte zelf.</p>
+                <ol class="tijdlijn">
+                    <li><span class="jaar">1783</span><p>De Engelse dominee en natuurkundige John Michell bedenkt dat een ster zo zwaar kan zijn dat licht er niet van weg kan komen. Hij noemt ze 'donkere sterren'.</p></li>
+                    <li><span class="jaar">1916</span><p>Karl Schwarzschild vindt een oplossing van Einsteins nieuwe zwaartekrachttheorie die precies zo'n donker object beschrijft.</p></li>
+                    <li><span class="jaar">1964</span><p>De röntgenbron Cygnus X-1 wordt ontdekt. In de jaren daarna wordt het het eerste object waarvan de meeste sterrenkundigen het erover eens zijn: dit is een zwart gat.</p></li>
+                    <li><span class="jaar">1967</span><p>De Amerikaanse natuurkundige John Wheeler maakt de naam 'zwart gat' (<i>black hole</i>) bekend.</p></li>
+                    <li><span class="jaar">1974</span><p>Stephen Hawking rekent uit dat zwarte gaten heel langzaam een beetje straling uitzenden en daardoor kunnen verdampen. Voor een zwart gat zo zwaar als de Zon duurt dat ongeveer 10<sup>67</sup> jaar, veel langer dan het heelal oud is.</p></li>
+                    <li><span class="jaar">1992–2020</span><p>Twee teams volgen jarenlang sterren die om het midden van de Melkweg draaien. Hun banen laten zien dat daar een onzichtbaar object van ruim vier miljoen zonsmassa's zit. Reinhard Genzel en Andrea Ghez krijgen er in 2020 de Nobelprijs voor, samen met Roger Penrose, die liet zien dat zwarte gaten volgen uit Einsteins theorie.</p></li>
+                    <li><span class="jaar">2015</span><p>De LIGO-detectoren in de Verenigde Staten meten voor het eerst zwaartekrachtgolven: trillingen in de ruimte van twee zwarte gaten (van 36 en 29 zonsmassa's) die samensmolten, 1,3 miljard lichtjaar hier vandaan.</p></li>
+                    <li><span class="jaar">2019</span><p>De Event Horizon Telescope, een netwerk van radiotelescopen over de hele wereld, maakt de eerste foto van een zwart gat: de schaduw van M87*, omringd door een ring van licht.</p></li>
+                    <li><span class="jaar">2022</span><p>Dezelfde telescopen maken een foto van Sagittarius A*, het zwarte gat in het midden van onze eigen Melkweg.</p></li>
+                </ol>
+            </section>
+
+            <section id="bekend">
+                <h2>Bekende zwarte gaten</h2>
+                <table class="tabel">
+                    <thead><tr><th>Naam</th><th>Massa</th><th>Afstand</th><th>Bijzonder</th></tr></thead>
+                    <tbody>
+                        <tr><td>Sagittarius A*</td><td class="getal" data-kop="Massa">4,3 miljoen zonsmassa's</td><td class="getal" data-kop="Afstand">26.000 lichtjaar</td><td data-kop="Bijzonder">Het superzware zwarte gat in het midden van onze Melkweg.</td></tr>
+                        <tr><td>M87*</td><td class="getal" data-kop="Massa">6,5 miljard zonsmassa's</td><td class="getal" data-kop="Afstand">55 miljoen lichtjaar</td><td data-kop="Bijzonder">Het eerste zwarte gat dat op de foto is gezet (2019).</td></tr>
+                        <tr><td>Gaia BH1</td><td class="getal" data-kop="Massa">ongeveer 10 zonsmassa's</td><td class="getal" data-kop="Afstand">1.560 lichtjaar</td><td data-kop="Bijzonder">Het dichtstbijzijnde zwarte gat dat we kennen (gevonden in 2022).</td></tr>
+                        <tr><td>Cygnus X-1</td><td class="getal" data-kop="Massa">ongeveer 21 zonsmassa's</td><td class="getal" data-kop="Afstand">7.200 lichtjaar</td><td data-kop="Bijzonder">Het eerste object dat algemeen als zwart gat werd gezien.</td></tr>
+                        <tr><td>TON 618</td><td class="getal" data-kop="Massa">tientallen miljarden zonsmassa's</td><td class="getal" data-kop="Afstand">ruim 10 miljard lichtjaar</td><td data-kop="Bijzonder">Een van de zwaarste zwarte gaten die we kennen; de schattingen lopen uiteen.</td></tr>
+                    </tbody>
+                </table>
+                <p class="muted">Een lichtjaar is de afstand die licht in een jaar aflegt: bijna tienduizend miljard kilometer.</p>
+            </section>
+
+            <section id="mythes">
+                <h2>Klopt het dat…</h2>
+                <div class="mythe"><h3><span class="antwoord">Nee</span>…een zwart gat alles opzuigt?</h3><p>Een zwart gat trekt net zo hard als elk ander ding met dezelfde massa. Alleen wie heel dichtbij komt, is verloren. Verder weg kun je er gewoon omheen draaien, zoals de sterren om Sagittarius A*.</p></div>
+                <div class="mythe"><h3><span class="antwoord">Nee</span>…er een zwart gat vlak bij de Aarde is?</h3><p>Het dichtstbijzijnde zwarte gat dat we kennen, Gaia BH1, staat 1.560 lichtjaar ver weg. Dat is veel te ver om ons iets te kunnen doen.</p></div>
+                <div class="mythe"><h3><span class="antwoord">Nee</span>…een deeltjesversneller een zwart gat kan maken dat de Aarde opslokt?</h3><p>Ook als een versneller als die bij CERN een piepklein zwart gaatje zou maken, verdampt dat volgens de theorie meteen. Bovendien botsen deeltjes uit de ruimte al miljarden jaren met veel meer energie op de Aarde en de maan, zonder dat er iets gebeurd is.</p></div>
+                <div class="mythe"><h3><span class="antwoord">Ja</span>…een zwart gat de tijd vertraagt?</h3><p>Dicht bij een zwart gat loopt de tijd echt langzamer dan ver ervandaan. Dat volgt uit Einsteins relativiteitstheorie en is op kleine schaal ook op Aarde gemeten.</p></div>
+            </section>
+
+            <section id="bronnen">
+                <h2>Bronnen</h2>
+                <ul class="bronnen">
+                    <li><a href="https://science.nasa.gov/universe/black-holes/" target="_blank" rel="noopener">NASA Science: Black Holes</a></li>
+                    <li><a href="https://eventhorizontelescope.org/" target="_blank" rel="noopener">Event Horizon Telescope</a>: de foto's van M87* en Sagittarius A*</li>
+                    <li><a href="https://www.ligo.caltech.edu/" target="_blank" rel="noopener">LIGO</a>: de eerste meting van zwaartekrachtgolven</li>
+                    <li><a href="https://www.nobelprize.org/prizes/physics/2020/summary/" target="_blank" rel="noopener">Nobelprijs voor de Natuurkunde 2020</a>: Penrose, Genzel en Ghez</li>
+                    <li><a href="https://www.eso.org/public/" target="_blank" rel="noopener">ESO</a>: de banen van sterren rond Sagittarius A*</li>
+                    <li><a href="https://www.esa.int/Science_Exploration/Space_Science/Gaia" target="_blank" rel="noopener">ESA Gaia</a>: de satelliet waarmee Gaia BH1 werd gevonden</li>
+                </ul>
+                <p class="muted">De simulatie bovenaan volgt lichtstralen door de gekromde ruimte rond een zwart gat dat niet draait. Het is een vereenvoudiging: de schijf, de sterren en de kleuren zijn nagemaakt, niet gemeten.</p>
+            </section>
+        </article>
+    </div>
+
+    <footer>
+        <div class="wrap">
+            <span>Kosmos · uitleg over het heelal</span>
+            <span>Gemaakt door <a href="https://parisangelopoulos.com">Paris Angelopoulos</a> · <a href="https://github.com/ParisAngelopoulos/kosmos" target="_blank" rel="noopener">code</a></span>
+        </div>
+    </footer>
+
+    <script src="../js/onderwerpen.js"></script>
+    <script src="../js/blackhole.js"></script>
+    <script src="../js/zwarte-gaten.js"></script>
+</body>
+</html>

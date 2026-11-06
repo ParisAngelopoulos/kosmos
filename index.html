@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kosmos · uitleg over het heelal</title>
+    <meta name="description" content="Kosmos legt het heelal uit in gewone taal. Te beginnen met zwarte gaten.">
+    <meta name="theme-color" content="#0c0b0d">
+    <link rel="preload" href="fonts/newsreader-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-root="">
+    <header class="kop">
+        <div class="wrap">
+            <a class="merk" href="./">Kosmos<span>.</span></a>
+            <nav id="onderwerpen" aria-label="Onderwerpen"><a href="zwarte-gaten/">Zwarte gaten</a></nav>
+        </div>
+    </header>
+
+    <main class="wrap thuis">
+        <p class="kicker">Uitleg over het heelal</p>
+        <h1>Kosmos</h1>
+        <p class="lead">Hoe werkt het heelal? Kosmos legt het uit in gewone taal, met echte cijfers en zonder dat je natuurkunde hoeft te hebben gestudeerd. We beginnen bij het vreemdste dat er is: zwarte gaten.</p>
+        <div class="kaarten" id="kaarten">
+            <a class="kaart zwart" href="zwarte-gaten/"><span class="status">Nu te lezen</span><h2>Zwarte gaten</h2><p>Waar zelfs licht niet meer uit kan ontsnappen</p></a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            <span>Kosmos · uitleg over het heelal</span>
+            <span>Gemaakt door <a href="https://parisangelopoulos.com">Paris Angelopoulos</a> · <a href="https://github.com/ParisAngelopoulos/kosmos" target="_blank" rel="noopener">code</a></span>
+        </div>
+    </footer>
+
+    <script src="js/onderwerpen.js"></script>
+    <script>
+        // A card per topic; the ones that are not ready yet are shown as "binnenkort"
+        document.getElementById('kaarten').innerHTML = ONDERWERPEN.map((o, i) => (o.klaar
+            ? `<a class="kaart${i === 0 ? ' zwart' : ''}" href="${o.slug}/"><span class="status">Nu te lezen</span><h2>${o.naam}</h2><p>${o.kort}</p></a>`
+            : `<div class="kaart binnenkort"><span class="status">Binnenkort</span><h2>${o.naam}</h2><p>${o.kort}</p></div>`)).join('');
+    </script>
+</body>
+</html>
