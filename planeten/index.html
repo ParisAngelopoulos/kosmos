@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planeten · Kosmos</title>
+    <meta name="description" content="Wat is een planeet, hoe ontstaat hij, en welke vreemde werelden draaien er om andere sterren? Met zes echte exoplaneten in 3D.">
+    <meta name="theme-color" content="#0c0b0d">
+    <link rel="preload" href="../fonts/newsreader-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-root="../" data-onderwerp="planeten">
+    <header class="kop">
+        <div class="wrap">
+            <a class="merk" href="../">Kosmos<span>.</span></a>
+            <nav id="onderwerpen" aria-label="Onderwerpen"><a href="../zwarte-gaten/">Zwarte gaten</a> <a href="./" aria-current="page">Planeten</a></nav>
+        </div>
+    </header>
+
+    <section class="planeet-held" aria-label="Kies een planeet bij een andere ster">
+        <div class="planeet-doek"><canvas id="planeet" aria-label="Artistieke weergave van de gekozen planeet, die langzaam draait"></canvas></div>
+        <div class="wrap planeet-tekst">
+            <p class="kicker">Onderwerp 2</p>
+            <h1>Planeten</h1>
+            <p class="lead held-lead">Werelden bij andere sterren: van lavaoceanen tot planeten waar het glas regent.</p>
+            <div class="kiezer" id="kiezer" role="group" aria-label="Kies een planeet"></div>
+            <div class="feiten" id="feiten" aria-live="polite"></div>
+        </div>
+    </section>
+
+    <div class="wrap pagina">
+        <aside class="inhoud" aria-label="Inhoud">
+            <p>Inhoud</p>
+            <ol>
+                <li><a href="#wat">Wat is een planeet?</a></li>
+                <li><a href="#ontstaan">Hoe ontstaan ze?</a></li>
+                <li><a href="#soorten">Soorten planeten</a></li>
+                <li><a href="#exo">Bij andere sterren</a></li>
+                <li><a href="#vinden">Hoe vind je ze?</a></li>
+                <li><a href="#leefbaar">Leven mogelijk?</a></li>
+                <li><a href="#werelden-kop">Zes werelden</a></li>
+                <li><a href="#dwerg">Dwergplaneten</a></li>
+                <li><a href="#mythes">Klopt het dat…</a></li>
+                <li><a href="#bronnen">Bronnen</a></li>
+            </ol>
+        </aside>
+
+        <article>
+            <section id="wat">
+                <h2>Wat is een planeet?</h2>
+                <p class="inleiding">Een planeet is een groot, rond hemellichaam dat om een ster draait en zelf geen licht maakt. Wat je 's nachts van een planeet ziet, is teruggekaatst zonlicht.</p>
+                <p>Lang was niet precies afgesproken wat een planeet is. Dat veranderde in 2006, toen de Internationale Astronomische Unie (IAU) drie regels vastlegde. Een planeet in ons zonnestelsel:</p>
+                <ol>
+                    <li>draait om de Zon;</li>
+                    <li>is zo zwaar dat de eigen zwaartekracht hem rond maakt;</li>
+                    <li>heeft zijn baan schoongeveegd: er draait niets anders van vergelijkbare grootte in de buurt.</li>
+                </ol>
+                <p>Pluto voldoet niet aan de derde regel: het deelt zijn baan met duizenden andere ijsbrokken in de Kuipergordel. Op 24 augustus 2006 werd Pluto daarom een <b>dwergplaneet</b>. Sindsdien heeft ons zonnestelsel acht planeten.</p>
+            </section>
+
+            <section id="ontstaan">
+                <h2>Hoe ontstaan planeten?</h2>
+                <p>Een planeet ontstaat samen met zijn ster. Een wolk van gas en stof trekt samen; in het midden ontstaat de ster, de rest gaat eromheen draaien in een platte schijf. Bij onze Zon gebeurde dat ongeveer 4,6 miljard jaar geleden, en bij jonge sterren kunnen telescopen zulke schijven nu nog zien. Daarom draaien planeten bijna altijd in ongeveer hetzelfde vlak en dezelfde kant op.</p>
+                <p>In die schijf plakten stofjes aan elkaar tot korrels, korrels tot rotsen, en rotsen tot brokken van honderden kilometers. Die botsten en groeiden verder tot planeten.</p>
+                <div class="kader"><strong>Waarom zijn de binnenste planeten klein?</strong>Dicht bij een jonge ster was het te warm voor ijs. Daar bleven alleen steen en metaal over, en dat was er niet veel: zo ontstonden kleine rotsplaneten. Verder weg, voorbij de <i>sneeuwgrens</i>, kon ook ijs aangroeien. Daar werden de planeten zo groot dat ze ook veel gas konden vasthouden: de reuzen.</div>
+            </section>
+
+            <section id="soorten">
+                <h2>Soorten planeten</h2>
+                <p>In ons zonnestelsel zijn er rotsplaneten, gasreuzen en ijsreuzen. Bij andere sterren blijken er nog veel meer soorten te bestaan, waaronder soorten die wij helemaal niet hebben.</p>
+                <div class="soorten">
+                    <div class="soort"><h3>Hete Jupiters</h3><p class="massa">gasreuzen vlak bij hun ster</p><p>Zo groot als Jupiter, maar in een paar dagen rond hun ster. Niemand had verwacht dat ze bestonden, tot de eerste in 1995 werd gevonden.</p></div>
+                    <div class="soort"><h3>Superaardes</h3><p class="massa">rotsplaneten, groter dan de Aarde</p><p>Een paar keer zo zwaar als de Aarde. Ze komen in ons heelal veel voor, maar ons zonnestelsel heeft er geen.</p></div>
+                    <div class="soort"><h3>Mini-Neptunussen</h3><p class="massa">tussen de Aarde en Neptunus in</p><p>Misschien wel de meest voorkomende planeten. Waarschijnlijk met een dikke laag gas of een diepe oceaan om een vaste kern.</p></div>
+                    <div class="soort"><h3>Zwervende planeten</h3><p class="massa">planeten zonder ster</p><p>Uit hun stelsel geslingerd en nu alleen op reis door de Melkweg. Er zijn er waarschijnlijk miljarden.</p></div>
+                </div>
+                <div class="kader"><strong>De planeten van ons eigen zonnestelsel</strong>Mercurius, Venus, de Aarde, Mars, Jupiter, Saturnus, Uranus en Neptunus bekijk je in 3D, met alle cijfers, in mijn project <a href="https://parisangelopoulos.com/zonnestelsel/">Zonnestelsel →</a></div>
+            </section>
+
+            <section id="exo">
+                <h2>Planeten bij andere sterren</h2>
+                <p>De Zon is niet de enige ster met planeten. Planeten bij andere sterren heten <b>exoplaneten</b>. Inmiddels zijn er meer dan 6.000 gevonden (stand 2025), en waarschijnlijk heeft bijna elke ster er een paar. Er zijn in de Melkweg dus meer planeten dan sterren.</p>
+                <ol class="tijdlijn">
+                    <li><span class="jaar">1992</span><p>De eerste exoplaneten worden gevonden, rond een pulsar: het restant van een ontplofte ster.</p></li>
+                    <li><span class="jaar">1995</span><p>Michel Mayor en Didier Queloz vinden 51 Pegasi b, de eerste planeet rond een ster zoals de Zon. Ze krijgen er in 2019 de Nobelprijs voor.</p></li>
+                    <li><span class="jaar">2009</span><p>De ruimtetelescoop Kepler begint te zoeken. In negen jaar vindt hij duizenden planeten.</p></li>
+                    <li><span class="jaar">2016</span><p>Rond Proxima Centauri, de ster die het dichtst bij de Zon staat (4,2 lichtjaar), wordt een planeet gevonden die ongeveer zo zwaar is als de Aarde.</p></li>
+                    <li><span class="jaar">2017</span><p>Rond de kleine ster TRAPPIST-1 blijken zeven planeten te draaien die ongeveer zo groot zijn als de Aarde.</p></li>
+                    <li><span class="jaar">2022</span><p>De James Webb-telescoop begint te werken en kan onderzoeken waar de lucht van sommige exoplaneten van gemaakt is.</p></li>
+                </ol>
+            </section>
+
+            <section id="vinden">
+                <h2>Hoe vind je een planeet die je niet kunt zien?</h2>
+                <p>Een planeet is honderden miljoenen keren zwakker dan zijn ster en staat er vlak naast. De meeste exoplaneten zijn daarom nooit rechtstreeks gezien. Sterrenkundigen merken ze op door wat ze met hun ster doen.</p>
+                <ul class="uitleg-lijst">
+                    <li><b>De ster wordt even zwakker.</b> Schuift een planeet voor zijn ster langs, dan wordt de ster heel even een klein beetje minder fel. Zo zoeken de ruimtetelescopen Kepler en TESS. Hoeveel zwakker, vertelt hoe groot de planeet is.</li>
+                    <li><b>De ster wiebelt.</b> Een planeet trekt zijn ster een beetje heen en weer. Dat zie je in het licht van de ster, dat afwisselend iets blauwer en iets roder wordt. Zo werd 51 Pegasi b gevonden.</li>
+                    <li><b>Een echte foto.</b> Bij een paar grote, jonge planeten ver van hun ster lukt het om het licht van de ster weg te filteren en de planeet zelf te zien. Dat zijn er nog maar enkele tientallen.</li>
+                </ul>
+            </section>
+
+            <section id="leefbaar">
+                <h2>Kan er leven zijn?</h2>
+                <p>Leven zoals wij het kennen heeft vloeibaar water nodig. Dat kan alleen op een planeet die niet te dicht bij zijn ster staat (dan kookt het water weg) en niet te ver (dan bevriest het). Die strook heet de <b>leefbare zone</b>, of de Goudlokjezone: niet te warm, niet te koud.</p>
+                <p>Er zijn tientallen planeten gevonden in de leefbare zone van hun ster. Dat betekent nog niet dat er leven is: ook Mars en Venus liggen op de rand van de leefbare zone van de Zon. Sterrenkundigen zoeken daarom naar gassen in de lucht van een planeet die door leven gemaakt kunnen worden. De James Webb-telescoop kan dat voor het eerst, maar tot nu toe is er nergens leven gevonden.</p>
+                <div class="kader"><strong>Rode dwergen</strong>De meeste sterren zijn rode dwergen: kleiner en koeler dan de Zon. Hun leefbare zone ligt zo dichtbij dat een planeet daar in een paar dagen of weken rond is en altijd dezelfde kant naar de ster toe draait. En rode dwergen schieten vaak felle uitbarstingen af. Of daar leven kan bestaan, is een van de grote vragen.</div>
+            </section>
+
+            <section id="werelden-kop">
+                <h2>Zes werelden</h2>
+                <p>De zes planeten bovenaan deze pagina. Klik op een naam om hem te bekijken.</p>
+                <table class="tabel" id="werelden"></table>
+                <p class="muted">Een lichtjaar is de afstand die licht in een jaar aflegt: bijna tienduizend miljard kilometer. Met de snelste ruimtesonde zou je naar Proxima Centauri, de dichtstbijzijnde, nog zo'n 7.000 jaar onderweg zijn.</p>
+            </section>
+
+            <section id="dwerg">
+                <h2>Dwergplaneten</h2>
+                <p>Een dwergplaneet is rond en draait om de Zon, maar heeft zijn baan niet schoongeveegd. De IAU erkent er vijf:</p>
+                <ul class="uitleg-lijst">
+                    <li><b>Ceres.</b> De grootste brok in de planetoïdengordel tussen Mars en Jupiter, bijna 950 km breed.</li>
+                    <li><b>Pluto.</b> Tot 2006 de negende planeet. Kleiner dan onze Maan, met een groot hartvormig ijsveld dat de ruimtesonde New Horizons in 2015 fotografeerde.</li>
+                    <li><b>Eris.</b> Ongeveer zo groot als Pluto, maar zwaarder. Zijn ontdekking in 2005 was de directe aanleiding om af te spreken wat een planeet is.</li>
+                    <li><b>Haumea.</b> Draait zo snel om zijn as (in vier uur) dat hij de vorm van een rugbybal heeft.</li>
+                    <li><b>Makemake.</b> Een koude, roodachtige wereld in de Kuipergordel, voorbij Pluto.</li>
+                </ul>
+            </section>
+
+            <section id="exo">
+                <h2>Planeten bij andere sterren</h2>
+                <p>De Zon is niet de enige ster met planeten. Planeten bij andere sterren heten <b>exoplaneten</b>. Inmiddels zijn er meer dan 6.000 gevonden (stand 2025), en waarschijnlijk heeft bijna elke ster er een paar.</p>
+                <ol class="tijdlijn">
+                    <li><span class="jaar">1992</span><p>De eerste exoplaneten worden gevonden, rond een pulsar: het restant van een ontplofte ster.</p></li>
+                    <li><span class="jaar">1995</span><p>Michel Mayor en Didier Queloz vinden 51 Pegasi b, de eerste planeet rond een ster zoals de Zon. Ze krijgen er in 2019 de Nobelprijs voor.</p></li>
+                    <li><span class="jaar">2009</span><p>De ruimtetelescoop Kepler begint te zoeken. In negen jaar vindt hij duizenden planeten.</p></li>
+                    <li><span class="jaar">2016</span><p>Rond Proxima Centauri, de ster die het dichtst bij de Zon staat (4,2 lichtjaar), wordt een planeet gevonden ongeveer zo groot als de Aarde.</p></li>
+                    <li><span class="jaar">2017</span><p>Rond de kleine ster TRAPPIST-1 blijken zeven planeten te draaien die ongeveer zo groot zijn als de Aarde.</p></li>
+                </ol>
+                <h3>Hoe vind je een planeet die je niet kunt zien?</h3>
+                <p>De meeste exoplaneten zijn nooit rechtstreeks gezien. Sterrenkundigen merken ze op door wat ze met hun ster doen. Schuift een planeet voor zijn ster langs, dan wordt de ster heel even een klein beetje minder fel: de <b>overgangsmethode</b>, waarmee Kepler en zijn opvolger TESS zoeken. En een planeet trekt zijn ster een beetje heen en weer, wat je kunt zien in het licht van de ster.</p>
+            </section>
+
+            <section id="mythes">
+                <h2>Klopt het dat…</h2>
+                <div class="mythe"><h3><span class="antwoord">Nee</span>…we al een tweede Aarde hebben gevonden?</h3><p>Er zijn planeten gevonden die ongeveer zo groot zijn als de Aarde en in de leefbare zone draaien. Maar van geen enkele weten we of er water, een lucht om te ademen of leven is. Een echte tweling van de Aarde, rond een ster zoals de Zon, is nog niet gevonden.</p></div>
+                <div class="mythe"><h3><span class="antwoord">Ja</span>…er planeten zonder ster zijn?</h3><p>Zwervende planeten zijn uit hun stelsel geslingerd en zwerven alleen door de Melkweg, donker en ijskoud. Er zijn er al tientallen gevonden.</p></div>
+                <div class="mythe"><h3><span class="antwoord">Waarschijnlijk</span>…het op een planeet glas regent?</h3><p>Op HD 189733 b is het zo heet dat er waarschijnlijk wolken van gesmolten glas ontstaan, die met stormen van duizenden kilometers per uur zijwaarts neerkomen.</p></div>
+                <div class="mythe"><h3><span class="antwoord">Nee</span>…we er ooit snel naartoe kunnen?</h3><p>Zelfs de dichtstbijzijnde exoplaneet, Proxima Centauri b, staat 4,2 lichtjaar weg: ruim 40.000 miljard kilometer. Met de snelste ruimtesondes van nu duurt dat duizenden jaren.</p></div>
+            </section>
+
+            <section id="bronnen">
+                <h2>Bronnen</h2>
+                <ul class="bronnen">
+                    <li><a href="https://science.nasa.gov/exoplanets/" target="_blank" rel="noopener">NASA Science: Exoplanets</a></li>
+                    <li><a href="https://exoplanetarchive.ipac.caltech.edu/" target="_blank" rel="noopener">NASA Exoplanet Archive</a>: alle bekende exoplaneten en hun cijfers</li>
+                    <li><a href="https://www.iau.org/public/themes/pluto/" target="_blank" rel="noopener">IAU</a>: wat een planeet is, en waarom Pluto een dwergplaneet werd</li>
+                    <li><a href="https://www.nobelprize.org/prizes/physics/2019/summary/" target="_blank" rel="noopener">Nobelprijs voor de Natuurkunde 2019</a>: Mayor en Queloz</li>
+                    <li><a href="https://webbtelescope.org/" target="_blank" rel="noopener">James Webb Space Telescope</a>: de lucht van exoplaneten</li>
+                </ul>
+                <p class="muted">De planeten bovenaan zijn artistieke weergaven, nagemaakt met wiskunde. Van geen van deze planeten bestaat een foto van dichtbij: kleuren en oppervlak zijn een gok op basis van wat we weten.</p>
+            </section>
+        </article>
+    </div>
+
+    <footer>
+        <div class="wrap">
+            <span>Kosmos · uitleg over het heelal</span>
+            <span>Gemaakt door <a href="https://parisangelopoulos.com">Paris Angelopoulos</a> · <a href="https://github.com/ParisAngelopoulos/kosmos" target="_blank" rel="noopener">code</a></span>
+        </div>
+    </footer>
+
+    <script src="../js/onderwerpen.js"></script>
+    <script src="../js/planeten-data.js"></script>
+    <script src="../js/planeet.js"></script>
+    <script src="../js/planeten.js"></script>
+    <script src="../js/inhoud.js"></script>
+</body>
+</html>

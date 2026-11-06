@@ -1,4 +1,4 @@
-// The page about black holes: the size calculator and the table of contents that follows along
+// The page about black holes: the size calculator
 
 // ---------- How big would it be as a black hole? ----------
 // The Schwarzschild radius: r = 2GM / c². For the mass of the Sun that is about 2.95 km.
@@ -45,19 +45,4 @@
   }
   form.addEventListener('click', e => { const b = e.target.closest('button[data-voorbeeld]'); if (b) toon(b.dataset.voorbeeld); });
   toon('aarde');
-})();
-
-// ---------- Table of contents: show which chapter you are reading ----------
-(function () {
-  const links = [...document.querySelectorAll('.inhoud a')];
-  if (!links.length || !('IntersectionObserver' in window)) return;
-  const byId = Object.fromEntries(links.map(a => [a.getAttribute('href').slice(1), a]));
-  const seen = new Map();
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => seen.set(e.target.id, e.isIntersecting));
-    const current = [...seen].filter(([, v]) => v).map(([id]) => id)[0];
-    if (!current) return;
-    links.forEach(a => a.classList.toggle('nu', a === byId[current]));
-  }, { rootMargin: '-20% 0px -70% 0px' });
-  document.querySelectorAll('article section[id]').forEach(s => observer.observe(s));
 })();

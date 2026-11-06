@@ -2,7 +2,7 @@
 // like zwarte-gaten/. Topics without "klaar" are shown as "binnenkort".
 const ONDERWERPEN = [
   { slug: 'zwarte-gaten', naam: 'Zwarte gaten', kort: 'Waar zelfs licht niet meer uit kan ontsnappen', klaar: true },
-  { slug: 'planeten', naam: 'Planeten', kort: 'De acht planeten van ons zonnestelsel, en die bij andere sterren' },
+  { slug: 'planeten', naam: 'Planeten', kort: 'De acht planeten van ons zonnestelsel, en die bij andere sterren', klaar: true },
   { slug: 'zonnestelsels', naam: 'Zonnestelsels', kort: 'Hoe sterren en planeten samen een stelsel vormen' },
 ];
 
