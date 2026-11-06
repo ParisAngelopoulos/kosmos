@@ -44,19 +44,31 @@ Uitleg over het heelal, in gewone taal en in het Nederlands. Onderwerpen: **zwar
 
 ## Zonnestelsels
 
-Live: [parisangelopoulos.com/kosmos/zonnestelsels/](https://parisangelopoulos.com/kosmos/zonnestelsels/)
-
-- **Acht planetenstelsels bij andere sterren, bewegend in beeld**: TRAPPIST-1, Kepler-90, HD 110067, 55 Cancri, HR 8799, Kepler-16 (twee zonnen), Proxima Centauri en de Ster van Barnard. De planeten draaien op hun echte snelheid ten opzichte van elkaar; de leefbare zone is een groene band.
-- **Vergelijk met ons zonnestelsel**: de banen van onze planeten op dezelfde schaal eroverheen.
-- **Laat het ritme horen**: een toon telkens als een planeet rond is, zodat je de baanresonantie van HD 110067 en TRAPPIST-1 hoort (Web Audio).
-- **Artikel**: wat een zonnestelsel is, hoe anders stelsels kunnen zijn, planeten in de maat, twee of drie zonnen, de leefbare zone, of ons stelsel bijzonder is, een tabel en mythes.
-- **Ons eigen zonnestelsel** staat in het project [Zonnestelsel](https://github.com/ParisAngelopoulos/zonnestelsel); de pagina linkt ernaar.
-- **Techniek**: canvas 2D (`js/stelsel.js`), schuin van boven gezien, met de afstanden op een wortelschaal. De gegevens komen uit het NASA Exoplanet Archive (`js/zonnestelsels-data.js`); de leefbare zone volgt Kopparapu e.a. (2013).
+- **Acht planetenstelsels bij andere sterren, bewegend in beeld.** De planeten draaien op hun echte snelheid ten opzichte van elkaar, en de leefbare zone is een groene band:
+  - TRAPPIST-1: zeven planeten zo groot als de Aarde, allemaal binnen de baan van Mercurius
+  - Kepler-90: acht planeten, net zoveel als bij ons
+  - HD 110067: zes planeten in een vast ritme
+  - 55 Cancri: met de lavawereld en een tweede ster ver weg
+  - HR 8799: vier reuzen die echt op een foto staan
+  - Kepler-16: een planeet met twee zonnen
+  - Proxima Centauri en de Ster van Barnard: onze dichtstbijzijnde buren
+- **Vergelijk met ons zonnestelsel.** De banen van onze planeten op dezelfde schaal eroverheen.
+- **Laat het ritme horen.** Een toon telkens als een planeet rond is, zodat je het vaste ritme (de baanresonantie) van HD 110067 en TRAPPIST-1 hoort.
+- **Een artikel in hoofdstukken**:
+  - wat een zonnestelsel is
+  - hoe anders stelsels kunnen zijn
+  - planeten in de maat
+  - twee of drie zonnen
+  - de leefbare zone
+  - of ons zonnestelsel bijzonder is
+  - een tabel van de acht stelsels
+  - mythes
+- **Ons eigen zonnestelsel** staat niet op deze pagina, maar in het project [Zonnestelsel](https://github.com/ParisAngelopoulos/zonnestelsel). De pagina linkt ernaar.
 
 ## Een onderwerp toevoegen
 
 1. Zet het onderwerp in `js/onderwerpen.js` en maak `klaar: true`.
-2. Maak een map met dezelfde naam (zoals `planeten/`) met een `index.html`. Neem `zwarte-gaten/index.html` als voorbeeld.
+2. Maak een map met dezelfde naam (zoals `zonnestelsels/`) met een `index.html`. Neem `zwarte-gaten/index.html` als voorbeeld.
 
 Het menu en de kaarten op de beginpagina komen er dan vanzelf bij.
 
@@ -64,7 +76,8 @@ Het menu en de kaarten op de beginpagina komen er dan vanzelf bij.
 
 - Gewone HTML, CSS en JavaScript, zonder framework en zonder build-stap
 - Beide 3D-weergaven zijn eigen WebGL-shaders (`js/blackhole.js`, `js/planeet.js`), zonder bibliotheek.
-- De gegevens van de zes exoplaneten staan in `js/planeten-data.js`; de kiezer en de tabel komen daaruit.
+- De gegevens van de zes exoplaneten en de top 10 staan in `js/planeten-data.js`; de kiezer en de tabellen komen daaruit.
+- De zonnestelsels tekent `js/stelsel.js` met canvas 2D, schuin van boven gezien, met de afstanden op een wortelschaal zodat planeten dicht bij hun ster zichtbaar blijven. De tonen komen uit de Web Audio API. De gegevens staan in `js/zonnestelsels-data.js`.
 - Bij het zwarte gat worden lichtstralen met *leapfrog*-stappen door het zwaartekrachtveld gevolgd; op een trage telefoon tekent hij vanzelf minder pixels.
 - Lettertype: Newsreader (SIL Open Font License), meegeleverd in `fonts/`
 
@@ -78,4 +91,4 @@ Open daarna http://localhost:8000.
 
 ## Bronnen
 
-NASA (ook het NASA Exoplanet Archive), ESA, ESO, de IAU, de Event Horizon Telescope, LIGO, de James Webb-telescoop en de Nobelprijzen voor de Natuurkunde van 2019 en 2020. De links staan onderaan elke pagina.
+NASA (ook het NASA Exoplanet Archive, waar alle cijfers over exoplaneten en hun banen vandaan komen), ESA (ook Cheops), ESO, de IAU, de Event Horizon Telescope, LIGO, de James Webb-telescoop en de Nobelprijzen voor de Natuurkunde van 2019 en 2020. De grenzen van de leefbare zone volgen Kopparapu e.a. (2013). De links staan onderaan elke pagina.
