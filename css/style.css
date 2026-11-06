@@ -219,3 +219,18 @@ a.kaart.zwart:hover::before { transform: scale(1.06) rotate(8deg); }
 .top p { margin: 0 0 6px; font-size: 17px; }
 .top .cijfers { font: 13.5px/1.5 var(--sans); color: var(--zacht); margin: 0; }
 @media (max-width: 640px) { .top li { padding-left: 38px; } .top li::before { font-size: 21px; } }
+
+/* ---------- Planetary systems: the moving orbits with the chooser ---------- */
+
+#stelsel { display: block; width: 100%; height: 100%; }
+.stelsel-held .planeet-doek { width: 64%; }
+.schakels { display: flex; flex-wrap: wrap; gap: 6px; max-width: 520px; margin: -12px 0 12px; }
+.schakel { font: 13.5px var(--sans); padding: 6px 11px; border: 1px dashed var(--lijn); background: rgba(12, 11, 13, 0.6); color: var(--zacht); cursor: pointer; }
+.schakel:hover { color: var(--tekst); border-color: var(--zacht); }
+.schakel[aria-pressed="true"] { border-style: solid; border-color: var(--gloed); color: var(--gloed); }
+.legenda { font: 13px/1.5 var(--sans); color: var(--zacht); margin: 0 0 22px; }
+.zone-stip { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: rgba(110, 200, 140, 0.5); vertical-align: -1px; }
+@media (max-width: 640px) {
+  .stelsel-held .planeet-doek { width: 100%; height: 36vh; }
+  .stelsel-held .planeet-tekst { margin-top: 0; }
+}

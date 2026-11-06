@@ -1,6 +1,6 @@
 # Kosmos
 
-Uitleg over het heelal, in gewone taal en in het Nederlands. Onderwerpen: **zwarte gaten** en **planeten**; zonnestelsels volgen later.
+Uitleg over het heelal, in gewone taal en in het Nederlands. Onderwerpen: **zwarte gaten**, **planeten** en **zonnestelsels**.
 
 **Live:** https://parisangelopoulos.com/kosmos/
 
@@ -41,6 +41,17 @@ Uitleg over het heelal, in gewone taal en in het Nederlands. Onderwerpen: **zwar
   - dwergplaneten
   - mythes
 - **Onze eigen acht planeten** staan niet op deze pagina, maar in het project [Zonnestelsel](https://github.com/ParisAngelopoulos/zonnestelsel). De pagina linkt ernaar.
+
+## Zonnestelsels
+
+Live: [parisangelopoulos.com/kosmos/zonnestelsels/](https://parisangelopoulos.com/kosmos/zonnestelsels/)
+
+- **Acht planetenstelsels bij andere sterren, bewegend in beeld**: TRAPPIST-1, Kepler-90, HD 110067, 55 Cancri, HR 8799, Kepler-16 (twee zonnen), Proxima Centauri en de Ster van Barnard. De planeten draaien op hun echte snelheid ten opzichte van elkaar; de leefbare zone is een groene band.
+- **Vergelijk met ons zonnestelsel**: de banen van onze planeten op dezelfde schaal eroverheen.
+- **Laat het ritme horen**: een toon telkens als een planeet rond is, zodat je de baanresonantie van HD 110067 en TRAPPIST-1 hoort (Web Audio).
+- **Artikel**: wat een zonnestelsel is, hoe anders stelsels kunnen zijn, planeten in de maat, twee of drie zonnen, de leefbare zone, of ons stelsel bijzonder is, een tabel en mythes.
+- **Ons eigen zonnestelsel** staat in het project [Zonnestelsel](https://github.com/ParisAngelopoulos/zonnestelsel); de pagina linkt ernaar.
+- **Techniek**: canvas 2D (`js/stelsel.js`), schuin van boven gezien, met de afstanden op een wortelschaal. De gegevens komen uit het NASA Exoplanet Archive (`js/zonnestelsels-data.js`); de leefbare zone volgt Kopparapu e.a. (2013).
 
 ## Een onderwerp toevoegen
 
