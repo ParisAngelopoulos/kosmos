@@ -193,3 +193,29 @@ a.kaart.zwart:hover::before { transform: scale(1.06) rotate(8deg); }
   .tijdlijn li { grid-template-columns: 60px 1fr; gap: 10px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Types of planets, in groups */
+.groep-kop { display: flex; align-items: baseline; gap: 12px; margin-top: 34px !important; }
+.groep-kop span { font: 600 13px var(--sans); color: var(--gloed); border: 1px solid var(--gloed); border-radius: 50%; width: 26px; height: 26px; display: inline-grid; place-items: center; flex: none; transform: translateY(-3px); }
+.soort .voorbeeld { font: 13.5px/1.5 var(--sans); color: var(--zacht); margin: 10px 0 0 !important; }
+.soort .voorbeeld a { color: var(--gloed); }
+.soort p:nth-last-child(2) { margin-bottom: 0; }
+
+/* Top 10 of a second Earth */
+.sorteer { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font: 14px var(--sans); margin: 18px 0 6px; }
+.sorteer span { color: var(--zacht); margin-right: 4px; }
+.sorteer button { font: 14.5px var(--sans); padding: 7px 13px; border: 1px solid var(--lijn); background: transparent; color: var(--tekst); cursor: pointer; }
+.sorteer button:hover { border-color: var(--zacht); }
+.sorteer button[aria-pressed="true"] { background: var(--gloed); border-color: var(--gloed); color: #1a0f05; }
+.top { list-style: none; counter-reset: top; margin: 14px 0; padding: 0; }
+.top li { counter-increment: top; position: relative; padding: 16px 0 16px 52px; border-top: 1px solid var(--lijn); }
+.top li::before { content: counter(top); position: absolute; left: 0; top: 14px; font: 600 26px var(--sans); color: var(--zacht); font-variant-numeric: tabular-nums; }
+.top li:first-child::before { color: var(--gloed); }
+.top-kop { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.top h3 { margin: 0; font-size: 22px; }
+.score { font: 600 16px var(--sans); color: var(--gloed); font-variant-numeric: tabular-nums; }
+.balk { height: 4px; background: var(--lijn); margin: 8px 0 10px; }
+.balk span { display: block; height: 100%; background: var(--gloed); }
+.top p { margin: 0 0 6px; font-size: 17px; }
+.top .cijfers { font: 13.5px/1.5 var(--sans); color: var(--zacht); margin: 0; }
+@media (max-width: 640px) { .top li { padding-left: 38px; } .top li::before { font-size: 21px; } }

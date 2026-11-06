@@ -42,3 +42,30 @@ const WERELDEN = [
     type: 6, kleuren: ['#9ad0d0', '#4f8f9a', '#c8e8e4'], lucht: '#a8f0f0', licht: '#ffb894', gloed: '', kanteling: 17, draai: 0.15,
   },
 ];
+
+// The ten planets most like the Earth by the Earth Similarity Index (ESI), calculated from radius
+// and starlight with the data of the NASA Exoplanet Archive (November 2026). Planets with only an
+// upper limit for their mass are left out. afstand in light-years; straal: is the size measured
+// (the planet passes in front of its star) or estimated from its mass?
+const VERVANGERS = [
+  { naam: "Teegarden's Star b", esi: 0.97, afstand: 12.5, jaar: 4.9, grootte: 1.05, gemeten: false, ontdekt: 2019,
+    tekst: 'Een van de dichtstbijzijnde kandidaten. Krijgt bijna precies zoveel licht als de Aarde, maar is in vijf dagen rond zijn ster.' },
+  { naam: 'TOI-700 d', esi: 0.93, afstand: 101, jaar: 37.4, grootte: 1.15, gemeten: true, ontdekt: 2020,
+    tekst: 'De eerste planeet zo groot als de Aarde in een leefbare zone die de telescoop TESS vond.' },
+  { naam: 'TOI-700 e', esi: 0.91, afstand: 101, jaar: 27.8, grootte: 0.92, gemeten: true, ontdekt: 2023,
+    tekst: 'Een buurman van TOI-700 d, iets kleiner dan de Aarde. Twee kandidaten in één stelsel.' },
+  { naam: 'TRAPPIST-1 d', esi: 0.91, afstand: 40.5, jaar: 4.0, grootte: 0.79, gemeten: true, ontdekt: 2016,
+    tekst: 'Kleiner dan de Aarde. De James Webb-telescoop vond in 2025 geen dikke lucht, wat de kans op leven kleiner maakt.' },
+  { naam: 'GJ 3378 b', esi: 0.90, afstand: 25.2, jaar: 21.4, grootte: 1.32, gemeten: false, ontdekt: 2026,
+    tekst: 'Pas dit jaar gevonden. Van deze planeet is alleen de minimale massa bekend; de grootte is geschat.' },
+  { naam: 'Kepler-1649 c', esi: 0.90, afstand: 301, jaar: 19.5, grootte: 1.06, gemeten: true, ontdekt: 2020,
+    tekst: 'Bijna precies zo groot als de Aarde. Hij werd pas jaren later ontdekt in oude gegevens van Kepler, die de computer eerst had afgekeurd.' },
+  { naam: 'K2-72 e', esi: 0.89, afstand: 217, jaar: 24.2, grootte: 1.29, gemeten: true, ontdekt: 2016,
+    tekst: 'Iets groter dan de Aarde en iets warmer: een rotsplaneet met misschien een tropisch klimaat.' },
+  { naam: 'Ross 128 b', esi: 0.88, afstand: 11.0, jaar: 9.9, grootte: 1.11, gemeten: false, ontdekt: 2017,
+    tekst: 'Zijn ster is opvallend rustig, met weinig felle uitbarstingen. Over zo’n 70.000 jaar is dit de dichtstbijzijnde ster bij de Zon.' },
+  { naam: 'Kepler-438 b', esi: 0.88, afstand: 639, jaar: 35.2, grootte: 1.12, gemeten: true, ontdekt: 2015,
+    tekst: 'Lijkt op papier sterk op de Aarde, maar zijn ster heeft zware uitbarstingen die de lucht waarschijnlijk hebben weggeblazen.' },
+  { naam: 'GJ 1061 c', esi: 0.87, afstand: 12.0, jaar: 6.7, grootte: 1.19, gemeten: false, ontdekt: 2020,
+    tekst: 'Een van de dichtstbijzijnde. Krijgt wat meer licht dan de Aarde: qua warmte zit hij tussen de Aarde en Venus in.' },
+];
