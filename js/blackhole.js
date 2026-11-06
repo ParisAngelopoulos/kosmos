@@ -150,7 +150,9 @@
     canvas.height = Math.max(2, Math.round(canvas.clientHeight * scale));
     gl.viewport(0, 0, canvas.width, canvas.height);
   }
-  window.addEventListener('resize', resize);
+  // Also when the canvas itself changes size, for example because the text next to it wraps differently
+  if ('ResizeObserver' in window) new ResizeObserver(resize).observe(canvas);
+  else window.addEventListener('resize', resize);
   resize();
 
   // The camera circles slowly around; dragging turns it yourself

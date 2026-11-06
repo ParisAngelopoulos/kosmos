@@ -137,10 +137,37 @@ a.kaart:hover { border-color: var(--zacht); }
 a.kaart.zwart:hover::before { transform: scale(1.06) rotate(8deg); }
 .kaart.binnenkort { opacity: 0.6; }
 
+/* ---------- Planets: the 3D planet with the chooser ---------- */
+
+.planeet-held { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden;
+  background: radial-gradient(ellipse at 70% 45%, #17151c 0%, var(--bg) 60%); }
+/* A canvas takes its height from its drawing size; the frame around it gives it the real size */
+.planeet-doek { position: absolute; top: 0; bottom: 0; right: 0; width: 62%; }
+#planeet { display: block; width: 100%; height: 100%; }
+.planeet-tekst { position: relative; z-index: 2; padding: 110px 0 60px; }
+.planeet-tekst h1 { font-size: clamp(56px, 8vw, 104px); margin: 0 0 22px; }
+.kiezer { display: flex; flex-wrap: wrap; gap: 6px; max-width: 520px; margin-bottom: 26px; }
+.kiezer button { font: 14.5px var(--sans); padding: 7px 13px; border: 1px solid var(--lijn); background: rgba(12, 11, 13, 0.6); color: var(--tekst); cursor: pointer; }
+.kiezer button:hover { border-color: var(--zacht); }
+.kiezer button[aria-pressed="true"] { background: var(--gloed); border-color: var(--gloed); color: #1a0f05; }
+.feiten { max-width: 440px; }
+.feiten h2 { font-size: 40px; margin: 0 0 8px; }
+.feiten p { margin: 0 0 16px; font-size: 18px; }
+.feiten dl { display: grid; grid-template-columns: 1fr 1fr; margin: 0; border-top: 1px solid var(--lijn); }
+.feiten dl div { padding: 8px 0; border-bottom: 1px solid var(--lijn); }
+.feiten dt { font: 12px var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--zacht); }
+.feiten dd { margin: 2px 0 0; font-size: 18px; }
+
+.held-lead { font-size: clamp(18px, 1.8vw, 21px); max-width: 26em; margin: -8px 0 22px; color: var(--zacht); }
+.feiten .klein { font: 13.5px/1.5 var(--sans); margin-top: 12px; }
+.tabel .link { font: inherit; font-weight: 600; color: var(--gloed); background: none; border: 0; padding: 0; cursor: pointer; text-align: left; }
+.tabel tr[data-id] { cursor: pointer; }
+.tabel tr[data-id]:hover td { background: var(--vlak); }
+
 /* ---------- Small screens ---------- */
 
 @media (max-width: 900px) {
-  .pagina { grid-template-columns: 1fr; gap: 0; }
+  .pagina { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .inhoud { display: none; }
   .kaarten { grid-template-columns: 1fr; }
   .kaart { min-height: 200px; }
@@ -155,6 +182,10 @@ a.kaart.zwart:hover::before { transform: scale(1.06) rotate(8deg); }
   .bijschrift { left: 16px; right: 16px; text-align: left; bottom: 14px; }
   .inleiding { font-size: 20px; }
   .soorten { grid-template-columns: 1fr; }
+  .planeet-held { display: block; min-height: 0; }
+  .planeet-doek { position: relative; width: 100%; height: 52vh; }
+  .planeet-tekst { padding: 0 0 40px; margin-top: -20px; }
+  .feiten h2 { font-size: 32px; }
   .tabel thead { display: none; }
   .tabel tr { display: block; padding: 10px 0; border-bottom: 1px solid var(--lijn); }
   .tabel td { display: block; border: 0; padding: 2px 0; }

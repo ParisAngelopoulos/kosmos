@@ -1,6 +1,6 @@
 # Kosmos
 
-Uitleg over het heelal, in gewone taal en in het Nederlands. Het eerste onderwerp is **zwarte gaten**; planeten en zonnestelsels volgen later.
+Uitleg over het heelal, in gewone taal en in het Nederlands. Onderwerpen: **zwarte gaten** en **planeten**; zonnestelsels volgen later.
 
 **Live:** https://parisangelopoulos.com/kosmos/
 
@@ -20,6 +20,27 @@ Uitleg over het heelal, in gewone taal en in het Nederlands. Het eerste onderwer
 - **Een inhoudsopgave** die meeloopt met waar je bent.
 - **Werkt op een telefoon.** Zonder WebGL krijg je een getekende afbeelding in plaats van de simulatie.
 
+## Planeten
+
+- **Zes echte exoplaneten in 3D bovenaan**, elk een ander soort wereld:
+  - een hete Jupiter (51 Pegasi b)
+  - een blauwe gasreus waar het glas regent (HD 189733 b)
+  - een lavawereld (55 Cancri e)
+  - de dichtstbijzijnde (Proxima Centauri b)
+  - een aardachtige planeet (TRAPPIST-1 e)
+  - een mini-Neptunus (K2-18 b)
+- **De 3D-weergave**: één WebGL-shader (`js/planeet.js`) tekent de bol, het oppervlak uit ruis, de wolken, de lucht en de gloed van hete planeten. Het licht heeft de kleur van de eigen ster, dus bij een rode dwerg rozig. Het zijn artistieke weergaven, en dat staat erbij.
+- **Een artikel in hoofdstukken**:
+  - wat een planeet is
+  - hoe planeten ontstaan
+  - soorten planeten, ook die wij niet hebben, zoals superaardes en zwervende planeten
+  - de geschiedenis van exoplaneten
+  - hoe je ze vindt
+  - of er leven kan zijn
+  - dwergplaneten
+  - mythes
+- **Onze eigen acht planeten** staan niet op deze pagina, maar in het project [Zonnestelsel](https://github.com/ParisAngelopoulos/zonnestelsel). De pagina linkt ernaar.
+
 ## Een onderwerp toevoegen
 
 1. Zet het onderwerp in `js/onderwerpen.js` en maak `klaar: true`.
@@ -30,7 +51,9 @@ Het menu en de kaarten op de beginpagina komen er dan vanzelf bij.
 ## Techniek
 
 - Gewone HTML, CSS en JavaScript, zonder framework en zonder build-stap
-- De simulatie is een eigen WebGL-shader (`js/blackhole.js`), zonder bibliotheek. Lichtstralen worden met *leapfrog*-stappen door het zwaartekrachtveld gevolgd; op een trage telefoon tekent hij vanzelf minder pixels.
+- Beide 3D-weergaven zijn eigen WebGL-shaders (`js/blackhole.js`, `js/planeet.js`), zonder bibliotheek.
+- De gegevens van de zes exoplaneten staan in `js/planeten-data.js`; de kiezer en de tabel komen daaruit.
+- Bij het zwarte gat worden lichtstralen met *leapfrog*-stappen door het zwaartekrachtveld gevolgd; op een trage telefoon tekent hij vanzelf minder pixels.
 - Lettertype: Newsreader (SIL Open Font License), meegeleverd in `fonts/`
 
 ## Lokaal draaien
@@ -43,4 +66,4 @@ Open daarna http://localhost:8000.
 
 ## Bronnen
 
-NASA, ESA, ESO, de Event Horizon Telescope, LIGO en de Nobelprijs voor de Natuurkunde 2020. De links staan onderaan de pagina over zwarte gaten.
+NASA (ook het NASA Exoplanet Archive), ESA, ESO, de IAU, de Event Horizon Telescope, LIGO, de James Webb-telescoop en de Nobelprijzen voor de Natuurkunde van 2019 en 2020. De links staan onderaan elke pagina.
