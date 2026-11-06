@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zonnestelsels · Kosmos</title>
+    <meta name="description" content="Planetenstelsels bij andere sterren: zeven planeten rond een rode dwerg, een planeet met twee zonnen, zes planeten in een volmaakt ritme. Met de banen bewegend in beeld.">
+    <meta name="theme-color" content="#0c0b0d">
+    <link rel="preload" href="../fonts/newsreader-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-root="../" data-onderwerp="zonnestelsels">
+    <header class="kop">
+        <div class="wrap">
+            <a class="merk" href="../">Kosmos<span>.</span></a>
+            <nav id="onderwerpen" aria-label="Onderwerpen"><a href="../zwarte-gaten/">Zwarte gaten</a> <a href="../planeten/">Planeten</a> <a href="./" aria-current="page">Zonnestelsels</a></nav>
+        </div>
+    </header>
+
+    <section class="planeet-held stelsel-held" aria-label="Kies een planetenstelsel">
+        <div class="planeet-doek"><canvas id="stelsel" aria-label="Het gekozen stelsel van schuin boven: de ster in het midden en de planeten op hun banen"></canvas></div>
+        <div class="wrap planeet-tekst">
+            <p class="kicker">Onderwerp 3</p>
+            <h1>Zonnestelsels</h1>
+            <p class="lead held-lead">Andere sterren, andere stelsels. Kies er een en kijk hoe de planeten rondgaan, op hun echte snelheid ten opzichte van elkaar.</p>
+            <div class="kiezer" id="kiezer" role="group" aria-label="Kies een stelsel"></div>
+            <div class="schakels">
+                <button type="button" class="schakel" data-doe="vergelijk" aria-pressed="false">Vergelijk met ons zonnestelsel</button>
+                <button type="button" class="schakel" data-doe="ritme" aria-pressed="false">Laat het ritme horen</button>
+                <button type="button" class="schakel" data-doe="pauze" aria-pressed="false">Pauze</button>
+            </div>
+            <p class="legenda"><span id="tijd"></span> · <span class="zone-stip"></span> leefbare zone · afstanden op een wortelschaal</p>
+            <div class="feiten" id="feiten" aria-live="polite"></div>
+        </div>
+    </section>
+
+    <div class="wrap pagina">
+        <aside class="inhoud" aria-label="Inhoud">
+            <p>Inhoud</p>
+            <ol>
+                <li><a href="#wat">Wat is een zonnestelsel?</a></li>
+                <li><a href="#anders">Hoe anders kan het?</a></li>
+                <li><a href="#ritme">Planeten in de maat</a></li>
+                <li><a href="#sterren">Twee of drie zonnen</a></li>
+                <li><a href="#zone">De leefbare zone</a></li>
+                <li><a href="#ons">Is ons stelsel bijzonder?</a></li>
+                <li><a href="#stelsels-kop">Acht stelsels</a></li>
+                <li><a href="#mythes">Klopt het dat…</a></li>
+                <li><a href="#bronnen">Bronnen</a></li>
+            </ol>
+        </aside>
+
+        <article>
+            <section id="wat">
+                <h2>Wat is een zonnestelsel?</h2>
+                <p class="inleiding">Een zonnestelsel is een ster met alles wat eromheen draait: planeten, manen, dwergplaneten, planetoïden en kometen. Alles is samen ontstaan uit één wolk van gas en stof, en wordt bij elkaar gehouden door de zwaartekracht van de ster.</p>
+                <p>Strikt genomen is er maar één <i>zonnestelsel</i>: dat van onze Zon. Bij andere sterren spreken sterrenkundigen van een <b>planetenstelsel</b>. In gewone taal worden ze allebei zonnestelsel genoemd, en dat doen we hier ook.</p>
+                <p>Van ruim 1.000 sterren weten we inmiddels dat er meer dan één planeet omheen draait (NASA, november 2026). Dat zijn alleen de stelsels die we kunnen zien: bij de meeste sterren is waarschijnlijk nog lang niet alles gevonden.</p>
+                <div class="kader"><strong>Ons eigen zonnestelsel</strong>De Zon en haar acht planeten bekijk je in 3D, met alle cijfers, in mijn project <a href="https://parisangelopoulos.com/zonnestelsel/">Zonnestelsel →</a> Deze pagina gaat over de stelsels bij andere sterren.</div>
+            </section>
+
+            <section id="anders">
+                <h2>Hoe anders kan een stelsel zijn?</h2>
+                <p>Lang dachten sterrenkundigen dat andere stelsels op het onze zouden lijken: kleine rotsplaneten dicht bij de ster, grote gasreuzen ver weg, en veel ruimte ertussen. Dat bleek niet zo te zijn.</p>
+                <ul class="uitleg-lijst">
+                    <li><b>Propvol.</b> Veel stelsels hebben al hun planeten dichter bij hun ster dan Mercurius bij de Zon. Bij <a href="#trappist">TRAPPIST-1</a> passen zeven planeten in een gebied dat zes keer kleiner is dan de baan van Mercurius.</li>
+                    <li><b>Reuzen op de verkeerde plek.</b> Hete Jupiters draaien in een paar dagen rond hun ster. Ze zijn verder weg ontstaan en daarna naar binnen geschoven, waarbij ze alles op hun pad wegduwden.</li>
+                    <li><b>Reuzen heel ver weg.</b> Bij <a href="#hr8799">HR 8799</a> draaien vier reuzen tot ruim twee keer zo ver als Neptunus van de Zon.</li>
+                    <li><b>Als erwten in een peul.</b> Planeten in hetzelfde stelsel lijken vaak op elkaar: ongeveer even groot en op regelmatige afstanden. Kijk maar naar <a href="#hd110067">HD 110067</a>. In ons zonnestelsel zijn de verschillen juist groot.</li>
+                </ul>
+            </section>
+
+            <section id="ritme">
+                <h2>Planeten in de maat</h2>
+                <p>Soms draaien planeten in een vast ritme. Als een planeet precies drie rondjes maakt terwijl zijn buurman er twee maakt, heet dat een <b>baanresonantie</b> van 3 op 2. Doordat ze elkaar steeds op dezelfde plekken tegenkomen, trekken ze elkaar telkens een beetje bij in de maat.</p>
+                <p>HD 110067 heeft zes planeten in zo'n ketting: 3 op 2, 3 op 2, 3 op 2, 4 op 3 en 4 op 3. Ook de zeven planeten van TRAPPIST-1 lopen in de maat. Zo'n ketting is breekbaar: één botsing of een langskomende ster en het ritme is weg. Een stelsel dat nog in de maat loopt, is dus sinds zijn ontstaan ongestoord gebleven. Dat vertelt sterrenkundigen hoe stelsels ontstaan.</p>
+                <div class="kader"><strong>Luister zelf</strong>Kies bovenaan <a href="#hd110067">HD 110067</a> en zet <i>Laat het ritme horen</i> aan. Elke keer dat een planeet de lijn rechts van de ster passeert, klinkt een toon. De binnenste planeten zijn het hoogst.</div>
+            </section>
+
+            <section id="sterren">
+                <h2>Twee of drie zonnen</h2>
+                <p>De Zon staat alleen, maar veel sterren niet. Ongeveer de helft van de sterren zoals de Zon heeft een of meer begeleiders: sterren die om elkaar heen draaien. Van ruim 400 van de stelsels met planeten weten we dat er meer dan één ster in staat.</p>
+                <ul class="uitleg-lijst">
+                    <li><b>Om één van de twee.</b> De planeten draaien om één ster, en de tweede staat ver weg. Bij <a href="#cancri">55 Cancri</a> staat de tweede ster zo'n duizend keer zo ver als de Aarde van de Zon. Daar zie je hem als een heldere ster aan de hemel.</li>
+                    <li><b>Om allebei.</b> De twee sterren staan dicht bij elkaar en de planeet draait om ze allebei. <a href="#kepler16">Kepler-16 b</a> was in 2011 de eerste die zo werd gevonden. Daar komen twee zonnen op en gaan er twee onder.</li>
+                </ul>
+                <p>De ster die het dichtst bij ons staat, Proxima Centauri, is zelf deel van een drietal met Alpha Centauri A en B.</p>
+            </section>
+
+            <section id="zone">
+                <h2>De leefbare zone</h2>
+                <p>Elk stelsel heeft een strook waar het niet te warm en niet te koud is voor vloeibaar water: de leefbare zone. Bovenaan zie je die als groene band. Waar die strook ligt, hangt af van de ster.</p>
+                <p>Rond een hete, felle ster als HR 8799 ligt hij twee tot ruim drie keer zo ver als de Aarde van de Zon. Rond een kleine rode dwerg als TRAPPIST-1 ligt hij twintig tot veertig keer dichter bij de ster dan de Aarde bij de Zon, en zijn de planeten daar in een paar dagen rond.</p>
+                <p>Een planeet in de leefbare zone is nog geen leefbare planeet. Bij 55 Cancri en Kepler-16 is het een gasreus zonder bodem. En of er water is, hangt ook af van de lucht van de planeet. De planeten die het meest op de Aarde lijken, staan in de <a href="../planeten/#vervangers">top 10 op de pagina over planeten</a>.</p>
+            </section>
+
+            <section id="ons">
+                <h2>Is ons zonnestelsel bijzonder?</h2>
+                <p>Een beetje. Vergeleken met de stelsels die we kennen, valt het onze op:</p>
+                <ul class="uitleg-lijst">
+                    <li><b>Geen superaarde of mini-Neptunus</b>, terwijl die bij andere sterren het meest voorkomen.</li>
+                    <li><b>Niets dicht bij de Zon.</b> Binnen de baan van Mercurius is het leeg, terwijl veel stelsels daar juist al hun planeten hebben.</li>
+                    <li><b>Een Jupiter op flinke afstand.</b> Maar ongeveer een op de tien sterren zoals de Zon heeft zo'n reus verder weg.</li>
+                </ul>
+                <p>Een deel daarvan komt doordat we zo zoeken: kleine planeten ver van hun ster zijn het moeilijkst te vinden. Een stelsel als het onze, bij een andere ster, zouden we met de telescopen van nu waarschijnlijk niet eens helemaal zien. Zet bovenaan <i>Vergelijk met ons zonnestelsel</i> aan om de banen van onze planeten op dezelfde schaal te zien.</p>
+            </section>
+
+            <section id="stelsels-kop">
+                <h2>Acht stelsels</h2>
+                <p>De stelsels bovenaan deze pagina. Klik op een naam om het te bekijken.</p>
+                <table class="tabel" id="stelsels"></table>
+                <p class="muted">De banen zijn getekend als cirkels; echte banen zijn een beetje ovaal. De afstanden staan op een wortelschaal, zodat planeten dicht bij hun ster zichtbaar blijven naast planeten ver weg. De snelheden ten opzichte van elkaar kloppen wel.</p>
+            </section>
+
+            <section id="mythes">
+                <h2>Klopt het dat…</h2>
+                <div class="mythe"><h3><span class="antwoord">Nee</span>…een zonnestelsel hetzelfde is als een melkweg?</h3><p>Een zonnestelsel is één ster met zijn planeten. Een melkwegstelsel is een verzameling van miljarden sterren. Onze Melkweg heeft er zo'n 100 tot 400 miljard, en de meeste hebben waarschijnlijk planeten.</p></div>
+                <div class="mythe"><h3><span class="antwoord">Nee</span>…alle planeten dezelfde kant op draaien?</h3><p>In ons zonnestelsel wel, omdat ze uit één draaiende schijf zijn ontstaan. Maar er zijn hete Jupiters gevonden die de andere kant op draaien dan hun ster, zoals WASP-17b. Ze zijn waarschijnlijk ooit uit hun baan geslingerd.</p></div>
+                <div class="mythe"><h3><span class="antwoord">Ja</span>…een planeet om twee sterren tegelijk kan draaien?</h3><p>Als hij ver genoeg van het paar af staat, trekken de twee sterren samen als één aan hem. Kepler-16 b draait zo al miljarden jaren rond.</p></div>
+                <div class="mythe"><h3><span class="antwoord">Waarschijnlijk</span>…bijna elke ster planeten heeft?</h3><p>Uit de metingen van Kepler blijkt dat de meeste sterren minstens één planeet hebben. Er zijn in de Melkweg dus meer planeten dan sterren.</p></div>
+            </section>
+
+            <section id="bronnen">
+                <h2>Bronnen</h2>
+                <ul class="bronnen">
+                    <li><a href="https://exoplanetarchive.ipac.caltech.edu/" target="_blank" rel="noopener">NASA Exoplanet Archive</a>: alle banen, groottes en temperaturen op deze pagina</li>
+                    <li><a href="https://science.nasa.gov/exoplanets/" target="_blank" rel="noopener">NASA Science: Exoplanets</a></li>
+                    <li><a href="https://www.eso.org/public/news/eso1706/" target="_blank" rel="noopener">ESO</a>: de zeven planeten van TRAPPIST-1</li>
+                    <li><a href="https://sci.esa.int/web/cheops" target="_blank" rel="noopener">ESA Cheops</a>: het ritme van HD 110067</li>
+                    <li>Kopparapu e.a. (2013): de grenzen van de leefbare zone</li>
+                </ul>
+            </section>
+        </article>
+    </div>
+
+    <footer>
+        <div class="wrap">
+            <span>Kosmos · uitleg over het heelal</span>
+            <span>Gemaakt door <a href="https://parisangelopoulos.com">Paris Angelopoulos</a> · <a href="https://github.com/ParisAngelopoulos/kosmos" target="_blank" rel="noopener">code</a></span>
+        </div>
+    </footer>
+
+    <script src="../js/onderwerpen.js"></script>
+    <script src="../js/zonnestelsels-data.js"></script>
+    <script src="../js/stelsel.js"></script>
+    <script src="../js/zonnestelsels.js"></script>
+    <script src="../js/inhoud.js"></script>
+</body>
+</html>
